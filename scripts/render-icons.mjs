@@ -1,21 +1,25 @@
-// Renders the SVG sources in design/ to the PNG icons referenced by manifest.json.
-import { readFileSync, writeFileSync } from 'node:fs';
+// Renders the SVG sources in design/ to the PNG icons referenced by manifest.json and to the store banner.
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { Resvg } from '@resvg/resvg-js';
-import { PLUGIN_DIR, ROOT } from './lib/paths.mjs';
+import { PLUGIN_NAME, ROOT } from './lib/paths.mjs';
 
-const ICONS = [
-  // [source, output, size in px]
-  ['icon.svg', 'plugin.png', 256],
-  ['icon.svg', 'category.png', 96],
-  ['icon.svg', 'action.png', 96],
-  ['key.svg', 'key.png', 196],
+const icons = path.join(PLUGIN_NAME, 'assets', 'icons');
+const IMAGES = [
+  // [source in design/, output relative to the repository root, width in px]
+  // The marketplace uses a 1:1 Icon as the cover and recommends 288x288 PNG
+  ['icon.svg', path.join(icons, 'plugin.png'), 288],
+  ['icon.svg', path.join(icons, 'category.png'), 96],
+  ['icon.svg', path.join(icons, 'action.png'), 96],
+  ['key.svg', path.join(icons, 'key.png'), 196],
+  // Marketplace banners are 3:2
+  ['banner.svg', path.join('store', 'banner-1.png'), 1098],
 ];
 
-for (const [source, output, size] of ICONS) {
+for (const [source, output, width] of IMAGES) {
   const svg = readFileSync(path.join(ROOT, 'design', source));
-  const png = new Resvg(svg, { fitTo: { mode: 'width', value: size } }).render().asPng();
-  const file = path.join(PLUGIN_DIR, 'assets', 'icons', output);
-  writeFileSync(file, png);
-  console.log(`${path.relative(ROOT, file)} (${size}x${size})`);
+  const image = new Resvg(svg, { fitTo: { mode: 'width', value: width } }).render();
+  mkdirSync(path.dirname(path.join(ROOT, output)), { recursive: true });
+  writeFileSync(path.join(ROOT, output), image.asPng());
+  console.log(`${output} (${image.width}x${image.height})`);
 }

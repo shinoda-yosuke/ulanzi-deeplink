@@ -67,6 +67,11 @@ npm run plugin:install   # ビルドして Ulanzi Studio のプラグインフ�
 OS に渡します。macOS は `open`、Windows は `rundll32 url.dll,FileProtocolHandler` を使います。URL はシェルを介さず
 1 つの引数として渡すため、コマンドとして解釈されることはありません。
 
+## プライバシー
+
+Deeplink Launcher はデータの収集・保存・送信を一切行いません。入力した URL は Ulanzi Studio がキーの設定として保存し、
+キーまたは **テスト** ボタンを押したときに OS へ渡されるだけです。
+
 ## 開発
 
 ```sh
@@ -85,7 +90,7 @@ Ulanzi Studio 同梱の Node.js（Node.js 20）で E2E テストを実行する�
 PLUGIN_NODE="/Applications/Ulanzi Studio.app/Contents/MacOS/NodeJS/node" npm test
 ```
 
-ディレクトリ構成やリリース手順は [README.md](README.md#development) を参照してください。
+ディレクトリ構成やリリース手順は [README.md](README.md#development)、ストアへの提出手順は [store/README.md](store/README.md) を参照してください。
 
 ## ライセンス
 

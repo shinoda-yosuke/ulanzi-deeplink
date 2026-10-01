@@ -67,6 +67,11 @@ The main service (`plugin/app.js`) validates the URL (it must start with a schem
 not allowed in URLs, and hands it to the operating system: `open` on macOS, `rundll32 url.dll,FileProtocolHandler` on
 Windows. The URL is passed as a single argument without a shell, so it is never interpreted as a command line.
 
+## Privacy
+
+Deeplink Launcher does not collect, store or send any data. The URLs you enter are saved by Ulanzi Studio with your key
+settings and are handed only to your operating system when you press the key or the **Test** button.
+
 ## Development
 
 ```sh
@@ -93,7 +98,8 @@ src/                               main service (Node.js)
   vendor/plugin-common-node/       Ulanzi SDK for Node.js (vendored)
 scripts/                           build, validation, packaging, install, icon rendering
 test/                              node:test suites
-design/                            icon sources
+design/                            icon and banner sources
+store/                             marketplace submission kit (banner, listing texts, steps)
 ```
 
 Ulanzi Studio starts the main service as `node plugin/app.js <address> <port> <language> <version>`. For debugging,
@@ -104,6 +110,7 @@ with the SDK's `logMessage`.
 
 1. Bump `version` in `package.json` and `Version` in `com.ulanzi.deeplink.ulanziPlugin/manifest.json` (tests check they match).
 2. Push a tag such as `v1.0.1`. GitHub Actions attaches the packaged zip to a new release.
+3. Submit the zip to the marketplace as described in [store/README.md](store/README.md).
 
 ## License
 
