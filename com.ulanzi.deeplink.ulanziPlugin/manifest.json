@@ -1,0 +1,46 @@
+{
+  "Author": "shinoda-yosuke",
+  "Name": "Deeplink Launcher",
+  "Description": "Open any deeplink (URL scheme) such as slack://, obsidian://, zoommtg:// or https:// with a key press.",
+  "Icon": "assets/icons/plugin.png",
+  "Version": "1.0.0",
+  "Category": "Deeplink Launcher",
+  "CategoryIcon": "assets/icons/category.png",
+  "CodePath": "plugin/app.js",
+  "Type": "JavaScript",
+  "UUID": "com.ulanzi.ulanzistudio.deeplink",
+  "Actions": [
+    {
+      "Name": "Open Deeplink",
+      "Icon": "assets/icons/action.png",
+      "PropertyInspectorPath": "property-inspector/open/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Default",
+          "Image": "assets/icons/key.png"
+        }
+      ],
+      "Tooltip": "Open a deeplink (URL scheme) when the key is pressed",
+      "UUID": "com.ulanzi.ulanzistudio.deeplink.open",
+      "SupportedInMultiActions": true,
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": []
+    }
+  ],
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.11"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Software": {
+    "MinVersion": "3.0.11"
+  }
+}

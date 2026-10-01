@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover" />
+  <title>Open Deeplink</title>
+  <link rel="stylesheet" href="../../libs/css/uspi.css">
+  <style>
+    .uspi-item-value.actions {
+      justify-content: flex-start;
+      gap: 12px;
+    }
+    .status {
+      flex: 1;
+      min-width: 0;
+      font-size: 12px;
+      line-height: 16px;
+      overflow-wrap: anywhere;
+    }
+    .status.ok {
+      color: var(--uspi-theme);
+    }
+    .status.error {
+      color: #ff6b6b;
+    }
+    .note {
+      margin: 0 10px 6px calc(var(--uspi-label-width) + 20px);
+      max-width: var(--uspi-width);
+      color: var(--uspi-unitcolor);
+      font-size: 12px;
+      line-height: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="uspi-wrapper hidden">
+    <div class="uspi-item">
+      <label class="uspi-item-label" for="url" data-localize>URL</label>
+      <input class="uspi-item-value" type="text" id="url" placeholder="e.g. slack://open" data-localize
+        spellcheck="false" autocomplete="off" autocapitalize="off">
+    </div>
+
+    <div class="uspi-item">
+      <div class="uspi-item-label empty"></div>
+      <div class="uspi-item-value actions">
+        <button type="button" id="test" data-localize>Test</button>
+        <span id="status" class="status" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+
+    <p class="note" data-localize>Opens the link with the app registered for its scheme, e.g. slack://, obsidian://, zoommtg:// or https://.</p>
+    <p class="note" data-localize>Spaces and non-ASCII characters are percent-encoded automatically.</p>
+  </div>
+
+  <script src="../../libs/js/constants.js"></script>
+  <script src="../../libs/js/eventEmitter.js"></script>
+  <script src="../../libs/js/timers.js"></script>
+  <script src="../../libs/js/utils.js"></script>
+  <script src="../../libs/js/ulanziApi.js"></script>
+  <script src="./inspector.js"></script>
+</body>
+</html>

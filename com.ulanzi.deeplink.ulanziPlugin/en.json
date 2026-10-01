@@ -1,0 +1,23 @@
+{
+  "Name": "Deeplink Launcher",
+  "Description": "Open any deeplink (URL scheme) such as slack://, obsidian://, zoommtg:// or https:// with a key press.",
+  "Actions": [
+    {
+      "Name": "Open Deeplink",
+      "Tooltip": "Open a deeplink (URL scheme) when the key is pressed"
+    }
+  ],
+  "Localization": {
+    "URL": "URL",
+    "e.g. slack://open": "e.g. slack://open",
+    "Test": "Test",
+    "Opened": "Opened",
+    "Opens the link with the app registered for its scheme, e.g. slack://, obsidian://, zoommtg:// or https://.": "Opens the link with the app registered for its scheme, e.g. slack://, obsidian://, zoommtg:// or https://.",
+    "Spaces and non-ASCII characters are percent-encoded automatically.": "Spaces and non-ASCII characters are percent-encoded automatically.",
+    "Set a deeplink URL for this key first.": "Set a deeplink URL for this key first.",
+    "The URL must start with a scheme such as myapp://": "The URL must start with a scheme such as myapp://",
+    "The URL contains invalid characters.": "The URL contains invalid characters.",
+    "No app is registered to open this kind of link.": "No app is registered to open this kind of link.",
+    "Could not open the link.": "Could not open the link."
+  }
+}
