@@ -4,11 +4,17 @@
       <stop offset="0" stop-color="#0F1B24"/>
       <stop offset="1" stop-color="#171733"/>
     </linearGradient>
-    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#14C9C9"/>
-      <stop offset="1" stop-color="#4F5BFF"/>
+    <!-- Same rainbow as icon.svg, in the glyph's own coordinates -->
+    <linearGradient id="rainbow" gradientUnits="userSpaceOnUse" x1="2.3" y1="12" x2="21.7" y2="12">
+      <stop offset="0" stop-color="#FF453A"/>
+      <stop offset="0.18" stop-color="#FF9F0A"/>
+      <stop offset="0.34" stop-color="#FFD60A"/>
+      <stop offset="0.5" stop-color="#30D158"/>
+      <stop offset="0.66" stop-color="#64D2FF"/>
+      <stop offset="0.82" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#BF5AF2"/>
     </linearGradient>
-    <g id="link" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+    <g id="link" fill="none" stroke="url(#rainbow)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
       <path d="M10.5 8H7.5a4 4 0 0 0 0 8h3"/>
       <path d="M13.5 8h3a4 4 0 0 1 0 8h-3"/>
       <path d="M9 12h6"/>
@@ -16,15 +22,14 @@
   </defs>
   <rect width="1098" height="732" fill="url(#bg)"/>
 
-  <rect x="102" y="104" width="200" height="200" rx="44" fill="url(#brand)"/>
-  <use href="#link" transform="translate(202 204) scale(6) rotate(-45) translate(-12 -12)"/>
+  <use href="#link" transform="translate(202 204) scale(9.2) rotate(-45) translate(-12 -12)"/>
 
   <text x="346" y="196" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="66" font-weight="700" fill="#FFFFFF">Deeplink Launcher</text>
   <text x="348" y="258" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="31" fill="#A7B0BE">Open any URL scheme with a single key</text>
 
   <g font-family="Menlo, Monaco, monospace" font-size="21" fill="#E8ECF2" text-anchor="middle">
-    <rect x="102" y="400" width="150" height="150" rx="22" fill="url(#brand)"/>
-    <use href="#link" transform="translate(177 475) scale(3.6) rotate(-45) translate(-12 -12)"/>
+    <rect x="102" y="400" width="150" height="150" rx="22" fill="#000000" stroke="#3A3F4B" stroke-width="2"/>
+    <use href="#link" transform="translate(177 475) scale(4.6) rotate(-45) translate(-12 -12)"/>
 
     <rect x="288" y="400" width="150" height="150" rx="22" fill="#23262D" stroke="#3A3F4B" stroke-width="2"/>
     <text x="363" y="482">slack://</text>
