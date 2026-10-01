@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
   <defs>
-    <!-- In the glyph's own coordinates (before rotation), so the three strokes share one rainbow along the link -->
-    <linearGradient id="rainbow" gradientUnits="userSpaceOnUse" x1="2.3" y1="12" x2="21.7" y2="12">
+    <!-- The URL scheme separator "://" on a 24-unit grid; one rainbow runs from the lower left to the upper right -->
+    <linearGradient id="rainbow" gradientUnits="userSpaceOnUse" x1="3" y1="21" x2="21" y2="3">
       <stop offset="0" stop-color="#FF453A"/>
       <stop offset="0.18" stop-color="#FF9F0A"/>
       <stop offset="0.34" stop-color="#FFD60A"/>
@@ -11,10 +11,9 @@
       <stop offset="1" stop-color="#BF5AF2"/>
     </linearGradient>
   </defs>
-  <g fill="none" stroke="url(#rainbow)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"
-     transform="translate(128 128) scale(10.6) rotate(-45) translate(-12 -12)">
-    <path d="M10.5 8H7.5a4 4 0 0 0 0 8h3"/>
-    <path d="M13.5 8h3a4 4 0 0 1 0 8h-3"/>
-    <path d="M9 12h6"/>
+  <g transform="translate(128 128) scale(11.4) translate(-12.125 -12)">
+    <circle cx="4.6" cy="9" r="1.75" fill="url(#rainbow)"/>
+    <circle cx="4.6" cy="15.5" r="1.75" fill="url(#rainbow)"/>
+    <path d="M9.3 20L14.1 4M15.3 20L20.1 4" fill="none" stroke="url(#rainbow)" stroke-width="2.6" stroke-linecap="round"/>
   </g>
 </svg>
