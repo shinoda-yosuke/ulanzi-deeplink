@@ -1,0 +1,23 @@
+{
+  "Name": "딥링크 런처",
+  "Description": "slack://, obsidian://, zoommtg://, https:// 등 모든 딥링크(URL 스킴)를 키 한 번으로 엽니다.",
+  "Actions": [
+    {
+      "Name": "딥링크 열기",
+      "Tooltip": "키를 누르면 딥링크(URL 스킴)를 엽니다"
+    }
+  ],
+  "Localization": {
+    "URL": "URL",
+    "e.g. slack://open": "예: slack://open",
+    "Test": "테스트",
+    "Opened": "열었습니다",
+    "Opens the link with the app registered for its scheme, e.g. slack://, obsidian://, zoommtg:// or https://.": "스킴에 등록된 앱으로 링크를 엽니다(예: slack://, obsidian://, zoommtg://, https://).",
+    "Spaces and non-ASCII characters are percent-encoded automatically.": "공백과 비 ASCII 문자는 자동으로 퍼센트 인코딩됩니다.",
+    "Set a deeplink URL for this key first.": "먼저 이 키의 딥링크 URL을 설정하세요.",
+    "The URL must start with a scheme such as myapp://": "URL은 myapp:// 와 같은 스킴으로 시작해야 합니다",
+    "The URL contains invalid characters.": "URL에 사용할 수 없는 문자가 포함되어 있습니다.",
+    "No app is registered to open this kind of link.": "이 종류의 링크를 열 수 있는 앱이 등록되어 있지 않습니다.",
+    "Could not open the link.": "링크를 열 수 없습니다."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "Name": "深度連結啟動器",
+  "Description": "一鍵開啟 slack://、obsidian://、zoommtg://、https:// 等任何深度連結（URL Scheme）。",
+  "Actions": [
+    {
+      "Name": "開啟深度連結",
+      "Tooltip": "按下按鍵時開啟深度連結（URL Scheme）"
+    }
+  ],
+  "Localization": {
+    "URL": "URL",
+    "e.g. slack://open": "例如：slack://open",
+    "Test": "測試",
+    "Opened": "已開啟",
+    "Opens the link with the app registered for its scheme, e.g. slack://, obsidian://, zoommtg:// or https://.": "使用已註冊該 URL Scheme 的應用程式開啟連結，例如 slack://、obsidian://、zoommtg:// 或 https://。",
+    "Spaces and non-ASCII characters are percent-encoded automatically.": "空格及非 ASCII 字元會自動進行百分號編碼。",
+    "Set a deeplink URL for this key first.": "請先為此按鍵設定深度連結 URL。",
+    "The URL must start with a scheme such as myapp://": "URL 必須以 Scheme 開頭，例如 myapp://",
+    "The URL contains invalid characters.": "URL 包含無效字元。",
+    "No app is registered to open this kind of link.": "沒有已註冊的應用程式可以開啟此類連結。",
+    "Could not open the link.": "無法開啟連結。"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "Name": "ディープリンクランチャー",
+  "Description": "slack://・obsidian://・zoommtg://・https:// などのディープリンク（URL スキーム）をキー 1 つで開きます。",
+  "Actions": [
+    {
+      "Name": "ディープリンクを開く",
+      "Tooltip": "キーを押すとディープリンク（URL スキーム）を開きます"
+    }
+  ],
+  "Localization": {
+    "URL": "URL",
+    "e.g. slack://open": "例: slack://open",
+    "Test": "テスト",
+    "Opened": "開きました",
+    "Opens the link with the app registered for its scheme, e.g. slack://, obsidian://, zoommtg:// or https://.": "URL スキームに登録されたアプリでリンクを開きます（slack://・obsidian://・zoommtg://・https:// など）。",
+    "Spaces and non-ASCII characters are percent-encoded automatically.": "スペースや日本語などの文字は自動的にパーセントエンコードされます。",
+    "Set a deeplink URL for this key first.": "このキーのディープリンク URL を設定してください。",
+    "The URL must start with a scheme such as myapp://": "URL は myapp:// のようなスキームで始めてください。",
+    "The URL contains invalid characters.": "URL に使用できない文字が含まれています。",
+    "No app is registered to open this kind of link.": "この種類のリンクを開けるアプリが登録されていません。",
+    "Could not open the link.": "リンクを開けませんでした。"
+  }
+}

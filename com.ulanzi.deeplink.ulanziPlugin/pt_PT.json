@@ -1,0 +1,23 @@
+{
+  "Name": "Lançador de Deeplinks",
+  "Description": "Abra qualquer deeplink (esquema de URL) como slack://, obsidian://, zoommtg:// ou https:// com o toque de uma tecla.",
+  "Actions": [
+    {
+      "Name": "Abrir deeplink",
+      "Tooltip": "Abre um deeplink (esquema de URL) quando a tecla é premida"
+    }
+  ],
+  "Localization": {
+    "URL": "URL",
+    "e.g. slack://open": "p. ex. slack://open",
+    "Test": "Testar",
+    "Opened": "Aberto",
+    "Opens the link with the app registered for its scheme, e.g. slack://, obsidian://, zoommtg:// or https://.": "Abre a ligação com a aplicação registada para o esquema, p. ex. slack://, obsidian://, zoommtg:// ou https://.",
+    "Spaces and non-ASCII characters are percent-encoded automatically.": "Os espaços e os caracteres não ASCII são codificados automaticamente.",
+    "Set a deeplink URL for this key first.": "Defina primeiro um URL de deeplink para esta tecla.",
+    "The URL must start with a scheme such as myapp://": "O URL tem de começar por um esquema como myapp://",
+    "The URL contains invalid characters.": "O URL contém caracteres inválidos.",
+    "No app is registered to open this kind of link.": "Não há nenhuma aplicação registada para abrir este tipo de ligação.",
+    "Could not open the link.": "Não foi possível abrir a ligação."
+  }
+}
